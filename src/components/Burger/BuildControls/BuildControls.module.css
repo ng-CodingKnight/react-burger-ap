@@ -1,0 +1,59 @@
+.BuildControls {
+    width: 100%;
+    background: #cf8f2e;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 0 2px 1px #ccc;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.BuildControls .order {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background: #9ACD32;
+    color: #F8F8FF;
+    width: 200px;
+    height: 60px;
+    font-weight: 2;
+    font-size: medium;
+    outline: none;
+
+}
+
+.BuildControls .order:hover {
+    background: #008000;
+    
+}
+
+.BuildControls button:disabled {
+    background-color: #AC9980;
+    border: 1px solid #7E7365;
+    color: #ccc;
+    cursor: default;
+}
+
+.BuildControls button:hover:disabled {
+    background-color: #AC9980;
+    color: #ccc;
+    cursor: not-allowed;
+    font-size: meidum;
+}
+
+.BuildControls .order:not(:disabled) {
+    animation: enable 0.3s linear;
+}
+
+@keyframes enable {
+    0% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
